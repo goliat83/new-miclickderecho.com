@@ -1,0 +1,860 @@
+<div
+    class="navbar-area bg-[#f0f8ff] border-b border-[#dfefff] relative z-[2] py-[20px] lg:py-[25px] xl:py-0"
+    [ngClass]="{'white-navbar bg-white border-none': router.url === '/', 'transparent-navbar': router.url === '/index-3', 'isSticky': isSticky}"
+>
+    <div class="mx-auto px-[12px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1920px] 2xl:px-[30px] 3xl:px-[120px]">
+        <nav class="navbar relative flex flex-wrap" [class.active]="classApplied">
+            <div class="self-center">
+                <a
+                    routerLink="/"
+                    [ngClass]="{'hidden': router.url === '/index-3'}"
+                >
+                    <img src="assets/images/logo.png" class="inline" alt="logo"> <!-- Black Navbar -->
+                </a>
+                <a
+                    routerLink="/"
+                    class="hidden"
+                    [ngClass]="{'inline-block': router.url === '/index-3'}"
+                >
+                    <img src="assets/images/white-logo.png" class="inline" alt="white-logo"> <!-- White Navbar -->
+                </a>
+            </div>
+            <button
+                class="navbar-toggler absolute ml-auto right-0 top-[4px] xl:hidden"
+                type="button"
+                (click)="toggleClass()"
+            >
+                <span
+                    class="burger-menu text-black cursor-pointer leading-none text-[30px]"
+                    [ngClass]="{'text-white': router.url === '/index-3'}"
+                >
+                    <i class="ri-menu-line"></i>
+                </span>
+            </button>
+            <div class="navbar-collapse flex self-center grow basis-auto">
+                <ul class="navbar-nav self-center flex-row ml-auto hidden xl:flex"> <!-- For Big Device Navbar -->
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc] dropdown-toggle"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Home
+                        </a>
+                        <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-[15px] opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Home Demo - 1
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/index-2"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Home Demo - 2
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/index-3"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Home Demo - 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            routerLink="/pricing"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc]" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Our Plans
+                        </a>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc] dropdown-toggle"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Our Pages
+                        </a>
+                        <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-[15px] opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/about"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px] relative">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc] dropdown-toggle"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Services
+                                </a>
+                                <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-[15px] opacity-0 invisible transition-all">
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            routerLink="/services"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                        >
+                                            Services
+                                        </a>
+                                    </li>
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            routerLink="/service-details"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                        >
+                                            Service Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/investment-funds"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Investment Funds
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/home-loan"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Home Loan
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/team"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/testimonials"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/help-center"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/privacy-policy"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/terms-conditions"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/not-found"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    404 Error Page
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px] relative">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc] dropdown-toggle"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Multi Level Menu
+                                </a>
+                                <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-[15px] opacity-0 invisible transition-all">
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                        >
+                                            First
+                                        </a>
+                                    </li>
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                        >
+                                            Second
+                                        </a>
+                                    </li>
+                                    <li class="py-[7px] px-[22px] relative">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc] dropdown-toggle"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                        >
+                                            Third
+                                        </a>
+                                        <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-[15px] opacity-0 invisible transition-all">
+                                            <li class="py-[7px] px-[22px]">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                >
+                                                    Third 1
+                                                </a>
+                                            </li>
+                                            <li class="py-[7px] px-[22px] relative">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                >
+                                                    Third 2
+                                                </a>
+                                            </li>
+                                            <li class="py-[7px] px-[22px]">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                >
+                                                    Third 3
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            routerLink="/savings-investments"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc]" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Savings & Investments
+                        </a>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc] dropdown-toggle"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Insights
+                        </a>
+                        <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-[15px] opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/blog"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Blog Grid
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/blog-details"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Blog Details
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/blog-details-without-sidebar"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                >
+                                    Blog Details Without Sidebar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            routerLink="/help-center"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc]" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav xl:hidden"> <!-- For Small Device Navbar -->
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc] dropdown-toggle"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                            (click)="toggleClass()"
+                        >
+                            Home
+                        </a>
+                        <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-[15px] opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Home Demo - 1
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/index-2"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Home Demo - 2
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/index-3"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Home Demo - 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            routerLink="/pricing"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc]" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                            (click)="toggleClass()"
+                        >
+                            Our Plans
+                        </a>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc] dropdown-toggle"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Our Pages
+                        </a>
+                        <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-[15px] opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/about"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px] relative">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc] dropdown-toggle"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Services
+                                </a>
+                                <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-[15px] opacity-0 invisible transition-all">
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            routerLink="/services"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            (click)="toggleClass()"
+                                        >
+                                            Services
+                                        </a>
+                                    </li>
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            routerLink="/service-details"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            (click)="toggleClass()"
+                                        >
+                                            Service Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/investment-funds"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Investment Funds
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/home-loan"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Home Loan
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/team"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Team
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/testimonials"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/help-center"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    FAQ
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/privacy-policy"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/terms-conditions"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/not-found"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    404 Error Page
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px] relative">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc] dropdown-toggle"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Multi Level Menu
+                                </a>
+                                <ul class="absolute bg-white left-full w-[270px] top-0 shadow-dropdown py-[15px] opacity-0 invisible transition-all">
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            (click)="toggleClass()"
+                                        >
+                                            First
+                                        </a>
+                                    </li>
+                                    <li class="py-[7px] px-[22px]">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            (click)="toggleClass()"
+                                        >
+                                            Second
+                                        </a>
+                                    </li>
+                                    <li class="py-[7px] px-[22px] relative">
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc] dropdown-toggle"
+                                            routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{exact: true}"
+                                            (click)="toggleClass()"
+                                        >
+                                            Third
+                                        </a>
+                                        <ul class="absolute bg-white -left-full w-[270px] top-0 shadow-dropdown py-[15px] opacity-0 invisible transition-all">
+                                            <li class="py-[7px] px-[22px]">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    (click)="toggleClass()"
+                                                >
+                                                    Third 1
+                                                </a>
+                                            </li>
+                                            <li class="py-[7px] px-[22px] relative">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    (click)="toggleClass()"
+                                                >
+                                                    Third 2
+                                                </a>
+                                            </li>
+                                            <li class="py-[7px] px-[22px]">
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    routerLinkActive="active"
+                                                    [routerLinkActiveOptions]="{exact: true}"
+                                                    (click)="toggleClass()"
+                                                >
+                                                    Third 3
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            routerLink="/savings-investments"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc]" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                            (click)="toggleClass()"
+                        >
+                            Savings & Investments
+                        </a>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            href="javascript:void(0)"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc] dropdown-toggle"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                        >
+                            Insights
+                        </a>
+                        <ul class="absolute bg-white left-0 w-[270px] top-[100%] shadow-dropdown py-[15px] opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/blog"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Blog Grid
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/blog-details"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Blog Details
+                                </a>
+                            </li>
+                            <li class="py-[7px] px-[22px]">
+                                <a
+                                    routerLink="/blog-details-without-sidebar"
+                                    class="block font-medium text-[15px] text-black transition-all hover:text-[#0a64bc]"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    routerLinkActive="active"
+                                    [routerLinkActiveOptions]="{exact: true}"
+                                    (click)="toggleClass()"
+                                >
+                                    Blog Details Without Sidebar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="xl:mx-[10px] 2xl:mx-[18px] py-[10px] lg:py-[15px] xl:py-[35px] 2xl:py-[41.5px] relative group last:mr-0 first:ml-0"
+                        [ngClass]="{'2xl:py-[32px]': router.url === '/'}"
+                    >
+                        <a
+                            routerLink="/help-center"
+                            class="text-black uppercase text-[14px] font-medium transition-all hover:text-[#0a64bc]" 
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"
+                            [ngClass]="{'text-white hover:text-white': router.url === '/index-3'}"
+                            (click)="toggleClass()"
+                        >
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <div
+                    class="other-options self-center border-t border-[#eeeeee] xl:border-none xl:ml-[20px] 2xl:ml-[50px] md:pt-[15px] lg:pt-[20px] xl:pt-0 mb-[10px] xl:mb-0"
+                    [ngClass]="{'border-[#413e3e]': router.url === '/index-3'}"
+                >
+                    <a
+                        routerLink="/login"
+                        class="mr-[15px] 2xl:mr-[20px] mt-[15px] md:mt-0 py-[11px] md:py-[12px] lg:py-[12.5px] px-[30px] md:px-[40px] inline-block text-[#0a64bc] text-[13px] md:text-[14px] font-medium uppercase border border-[#0a64bc] bg-transparent rounded-full transition-all hover:bg-[#0a64bc] hover:text-white"
+                        [ngClass]="{'text-white border-white hover:border-[#0a64bc]': router.url === '/index-3'}"
+                        (click)="toggleClass()"
+                    >
+                        Login
+                    </a>
+                    <a
+                        routerLink="/register"
+                        class="mt-[15px] md:mt-0 py-[11px] md:py-[12px] lg:py-[12.5px] px-[30px] md:px-[40px] inline-block text-white text-[13px] md:text-[14px] font-medium uppercase border border-[#b31942] bg-[#b31942] rounded-full transition-all hover:bg-white hover:text-[#b31942]"
+                        (click)="toggleClass()"
+                    >
+                        Register Account
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
