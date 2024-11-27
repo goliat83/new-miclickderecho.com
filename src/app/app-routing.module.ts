@@ -21,6 +21,7 @@ import { PrivacyPolicyPageComponent } from './components/pages/privacy-policy-pa
 import { TermsConditionsPageComponent } from './components/pages/terms-conditions-page/terms-conditions-page.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { HomeComponent } from './components/pages/home-component/home-component.component';
 
 const routes: Routes = [
     {path: '', component: HomeDemoOneComponent},
@@ -43,6 +44,7 @@ const routes: Routes = [
     {path: 'register', component: RegisterPageComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    {path: 'home', component: HomeComponent},
     // Here add new pages component
 
     {path: '**', component: ErrorPageComponent} // This line will remain down from the whole pages component list

@@ -11,7 +11,7 @@ export class HomeDemoTwoComponent {
     title = 'Home Demo 2 - Tartu';
 
     constructor(private titleService:Title) {}
-    
+
     ngOnInit() {
         this.titleService.setTitle(this.title);
     }

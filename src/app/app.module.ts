@@ -72,7 +72,7 @@ import { PrivacyPolicyPageComponent } from './components/pages/privacy-policy-pa
 import { TermsConditionsPageComponent } from './components/pages/terms-conditions-page/terms-conditions-page.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
-
+import { HomeComponent } from './components/pages/home-component/home-component.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -142,6 +142,7 @@ import { RegisterPageComponent } from './components/pages/register-page/register
         TermsConditionsPageComponent,
         LoginPageComponent,
         RegisterPageComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
